@@ -1,0 +1,364 @@
+{
+	"id": "ef4b6fb6-0609-2c9a-47d5-27cbaefd69a8",
+	"name": "Online Scout Manager",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"id": "31834e4f-4d91-0fd9-3a95-ee624a39bc13",
+			"name": "APIs Core Setup",
+			"description": "",
+			"order": [
+				"0601fe95-23ac-a1f2-cbcc-863560d78b4e",
+				"0a72b431-d5ed-eb68-d18a-060fee18dffa",
+				"99c5fe13-8877-7308-c2fb-897f0436b908",
+				"988a4ca5-36dd-160c-d040-0190452b7ae8"
+			],
+			"owner": "66995"
+		},
+		{
+			"id": "67773259-14b5-71a0-9872-cc3ee0942fc8",
+			"name": "Events Tab",
+			"description": "",
+			"order": [
+				"de11565f-53ea-224f-6f08-eee002cbf6f2"
+			],
+			"owner": "66995"
+		},
+		{
+			"id": "a7af1686-7fb6-aa66-3ef6-80950f58cb30",
+			"name": "Personal Details Tab",
+			"description": "",
+			"order": [
+				"519b9e39-a8f1-a915-9380-8f84eb4c0a23",
+				"b3c7e27b-244f-7241-e7eb-08684c7e5474"
+			],
+			"owner": "66995"
+		}
+	],
+	"timestamp": 0,
+	"owner": "66995",
+	"remoteLink": "https://www.getpostman.com/collections/cc18d40163c0887ec9be",
+	"public": false,
+	"requests": [
+		{
+			"id": "0601fe95-23ac-a1f2-cbcc-863560d78b4e",
+			"headers": "Content-type: application/x-www-form-urlencoded\n",
+			"url": "https://www.onlinescoutmanager.co.uk/users.php?action=authorise",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "apiid",
+					"value": "{{API_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "token",
+					"value": "{{API_TOKEN}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "{{USER_EMAIL}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "password",
+					"value": "{{USER_PASSWORD}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459080859791,
+			"name": "API - Authorise",
+			"description": "",
+			"collectionId": "ef4b6fb6-0609-2c9a-47d5-27cbaefd69a8"
+		},
+		{
+			"id": "0a72b431-d5ed-eb68-d18a-060fee18dffa",
+			"headers": "",
+			"url": "https://www.onlinescoutmanager.co.uk/api.php?action=getTerms",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "apiid",
+					"value": "{{API_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "token",
+					"value": "{{API_TOKEN}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "userid",
+					"value": "{{USER_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "secret",
+					"value": "{{USER_SECRET}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459080953061,
+			"name": "API - Terms",
+			"description": "",
+			"collectionId": "ef4b6fb6-0609-2c9a-47d5-27cbaefd69a8"
+		},
+		{
+			"id": "519b9e39-a8f1-a915-9380-8f84eb4c0a23",
+			"headers": "",
+			"url": "https://www.onlinescoutmanager.co.uk/ext/members/contact/?action=getListOfMembers&sort=lastname&sectionid=11122&termid=127065&section=cubs",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "apiid",
+					"value": "{{API_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "token",
+					"value": "{{API_TOKEN}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "userid",
+					"value": "{{USER_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "secret",
+					"value": "{{USER_SECRET}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459081216392,
+			"name": "Personal Details",
+			"description": "Get the contact information for the Cubs.",
+			"collectionId": "ef4b6fb6-0609-2c9a-47d5-27cbaefd69a8"
+		},
+		{
+			"id": "988a4ca5-36dd-160c-d040-0190452b7ae8",
+			"headers": "",
+			"url": "https://www.onlinescoutmanager.co.uk/api.php?action=getUserRoles",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "apiid",
+					"value": "{{API_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "token",
+					"value": "{{API_TOKEN}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "userid",
+					"value": "{{USER_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "secret",
+					"value": "{{USER_SECRET}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459081293893,
+			"name": "API - User Roles",
+			"description": "",
+			"collectionId": "ef4b6fb6-0609-2c9a-47d5-27cbaefd69a8"
+		},
+		{
+			"id": "99c5fe13-8877-7308-c2fb-897f0436b908",
+			"headers": "",
+			"url": "https://www.onlinescoutmanager.co.uk/api.php?action=getSectionConfig",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "apiid",
+					"value": "{{API_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "token",
+					"value": "{{API_TOKEN}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "userid",
+					"value": "{{USER_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "secret",
+					"value": "{{USER_SECRET}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459081008669,
+			"name": "API - Section Config",
+			"description": "",
+			"collectionId": "ef4b6fb6-0609-2c9a-47d5-27cbaefd69a8"
+		},
+		{
+			"id": "b3c7e27b-244f-7241-e7eb-08684c7e5474",
+			"headers": "",
+			"url": "https://www.onlinescoutmanager.co.uk/ext/members/contact/grid/?action=getMembers",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "apiid",
+					"value": "{{API_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "token",
+					"value": "{{API_TOKEN}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "userid",
+					"value": "{{USER_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "secret",
+					"value": "{{USER_SECRET}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "section_id",
+					"value": "{{SECTION_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "term_id",
+					"value": "{{TERM_ID}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459081277743,
+			"name": "Grid Details",
+			"description": "",
+			"collectionId": "ef4b6fb6-0609-2c9a-47d5-27cbaefd69a8",
+			"responses": []
+		},
+		{
+			"id": "de11565f-53ea-224f-6f08-eee002cbf6f2",
+			"headers": "",
+			"url": "https://www.onlinescoutmanager.co.uk/ext/events/summary/?action=get",
+			"preRequestScript": "",
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "apiid",
+					"value": "{{API_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "token",
+					"value": "{{API_TOKEN}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "userid",
+					"value": "{{USER_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "secret",
+					"value": "{{USER_SECRET}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "sectionid",
+					"value": "{{SECTION_ID}}",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "termid",
+					"value": "{{TERM_ID}}",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"tests": "",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1459081171548,
+			"name": "Event Summary",
+			"description": "Get the summary table for events.",
+			"collectionId": "ef4b6fb6-0609-2c9a-47d5-27cbaefd69a8"
+		}
+	]
+}
